@@ -978,7 +978,7 @@
             </div>
             
             <p class="text-slate-600 text-sm mb-4">
-                ¿Necesitas ayuda? Agenda tu consulta inicial gratuita de 30 minutos.
+                ¿Necesitas ayuda? Agenda tu consulta inicial de 30 minutos.
             </p>
             
             <button
@@ -1049,6 +1049,20 @@
 
         <script>
         lucide.createIcons();
+
+        let isCtaMinimized = false;
+
+        function minimizeCTA() {
+            document.getElementById('ctaCard').classList.add('hidden');
+            document.getElementById('ctaButton').classList.remove('hidden');
+            isCtaMinimized = true;
+        }
+
+        function expandCTA() {
+            document.getElementById('ctaCard').classList.remove('hidden');
+            document.getElementById('ctaButton').classList.add('hidden');
+            isCtaMinimized = false;
+        }
 
         // Form validation
         function validateForm() {
